@@ -7,25 +7,37 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(51, 51, 51, 40),
+        backgroundColor: Color(colButtons),
         title: Text("SecondScreen"),
       ),
       backgroundColor: Color.fromRGBO(41, 41, 41, 100),
       body: Center(
-        child: RaisedButton(
-          child: Text(
-            'Back',
-            style: TextStyle(
-              color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FlatButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainScreen()),
+                );
+              },
+              color: Color(colnav),
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                // Replace with a Row for horizontal icon + text
+                children: <Widget>[
+                  Text(
+                    "Back",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-          color: new Color(colButtons),
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => MainScreen()),
-            );
-          },
+          ],
         ),
       ),
     );

@@ -7,7 +7,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(51, 51, 51, 32),
+        backgroundColor: Color(colButtons),
         leading: IconButton(
             icon: Icon(Icons.menu, color: Colors.white54), onPressed: null),
         title: Text("Mainscreen"),
@@ -15,13 +15,28 @@ class MainScreen extends StatelessWidget {
       backgroundColor: Color(colBg),
       body: Center(
         child: RaisedButton(
-          child: Text(
-            'Play',
-            style: TextStyle(
-              color: Colors.white,
-            ),
+          color: Color(colButtons),
+          // child: Text(
+          //   'Play',
+          //   style: TextStyle(
+          //     color: Colors.white,
+          //   ),
+          // ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                'Play the game',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              Icon(
+                Icons.play_circle_outline_rounded,
+                color: Colors.white,
+                size: 50,
+              ),
+            ],
           ),
-          color: new Color(colButtons),
+          // child: new IconButton(icon: Icon(Icons.play_arrow)),
           onPressed: () {
             Navigator.pushReplacement(
               context,

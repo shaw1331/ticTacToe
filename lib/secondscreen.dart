@@ -10,36 +10,50 @@ class SecondScreen extends StatelessWidget {
         backgroundColor: Color(colButtons),
         title: Text("SecondScreen"),
       ),
+
       backgroundColor: Color.fromRGBO(41, 41, 41, 100),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FlatButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => MainScreen()),
-                );
-              },
-              color: Color(colnav),
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                // Replace with a Row for horizontal icon + text
-                children: <Widget>[
-                  Text(
-                    "Back",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  )
-                ],
+      body: Column(
+        children: <Widget> [
+          Row(
+            children: <Widget> [
+              Container(
+                child: Expanded(
+                  child: Image(
+                    image: AssetImage('images/grid1.jpeg'),
+                  ),
+                ),
               ),
-            ),
-          ],
-        ),
+
+            ],
+          ),
+
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget> [
+              FlatButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainScreen()),
+                  );
+                },
+                color: Color(colnav),
+                padding: EdgeInsets.all(10.0),
+                child: Text(
+                  "Back",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ],
+          )
+
+
+        ],
       ),
+
     );
   }
 }

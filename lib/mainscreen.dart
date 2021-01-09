@@ -7,6 +7,7 @@ import 'secondscreen.dart';
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
 
       backgroundColor: Color(colBg),
@@ -15,28 +16,22 @@ class MainScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
             Container(
-               height: 200,
+              height: 200,
               width: 200,
               child: Image.asset('images/gifmainpage.gif'),
             ),
+
             Card(
               child: RaisedButton(
-                color: Color(colButtons),
+                padding: EdgeInsets.all(2),
+                color: Colors.black,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Icon(
-                      Icons.play_circle_outline_rounded,
-                      color: Colors.white,
-                      size: 100,
-                    ),
-                    Text(
-                      'Play',
-                      style: TextStyle(
-                        fontFamily: 'Satisfy',
-                          color: Colors.white,
-                          fontSize: 20,
-
+                    Container(
+                      height: 135,
+                      width: 135,
+                      child: Image(image: AssetImage('images/13.png')
                       ),
                     ),
                   ],
@@ -52,21 +47,16 @@ class MainScreen extends StatelessWidget {
             ),
             Card(
               child: RaisedButton(
-                color: Color(colButtons),
+                padding: EdgeInsets.all(2),
+                color: Colors.black,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Icon(
-                      Icons.bar_chart,
-                      color: Colors.white,
-                      size: 100,
-                    ),
-                    Text(
-                      'Stats',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Satisfy',
+
+                    Container(
+                      height: 135,
+                      width: 135,
+                      child: Image(image: AssetImage('images/11.png')
                       ),
                     ),
                   ],
@@ -82,21 +72,15 @@ class MainScreen extends StatelessWidget {
             ),
             Card(
               child: RaisedButton(
+                padding: EdgeInsets.all(2),
                 color: Color(colButtons),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Icon(
-                      Icons.settings,
-                      color: Colors.white,
-                      size: 100,
-                    ),
-                    Text(
-                      'Settings',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Satisfy',
+                    Container(
+                      height: 135,
+                      width: 135,
+                      child: Image(image: AssetImage('images/12.png')
                       ),
                     ),
                   ],

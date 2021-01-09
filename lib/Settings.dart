@@ -10,35 +10,34 @@ class Settings extends StatelessWidget {
         backgroundColor: Color(colButtons),
         title: Text("Settings"),
       ),
-      backgroundColor: Color.fromRGBO(41, 41, 41, 100),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FlatButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => MainScreen()),
-                );
-              },
-              color: Color(colnav),
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                // Replace with a Row for horizontal icon + text
-                children: <Widget>[
-                  Text(
-                    "Back",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  )
-                ],
-              ),
+      backgroundColor: Color(colBg),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          // Align(
+          //     alignment: Alignment.topLeft,
+          //     child: Container(
+          //       padding: const EdgeInsets.fromLTRB(15, 10, 1, 10),
+          //       child: Text(
+          //         "Basics",
+          //         style: TextStyle(color: Colors.white, fontSize: 20),
+          //       ),
+          //       width: 200.0,
+          //       height: 80.0,
+          //     )),
+
+          Container(
+            child: Text(
+              "Hemlo",
+              style: TextStyle(color: Colors.white),
             ),
-          ],
-        ),
+            padding: const EdgeInsets.all(0.0),
+            width: 80.0,
+            height: 80.0,
+          ),
+        ],
       ),
     );
   }

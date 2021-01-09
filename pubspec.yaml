@@ -31,3 +31,11 @@ flutter:
     - family: Satisfy
       fonts:
         - asset: fonts/Satisfy-Regular.ttf
+    - family: SansSemiBold
+      fonts:
+        - asset: fonts/SourceSansPro-SemiBold.ttf
+    - family: Baba
+      fonts:
+        - asset: fonts/BebasNeue-Regular.ttf
+
+   

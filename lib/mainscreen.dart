@@ -11,103 +11,112 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
 
       backgroundColor: Color(colBg),
-      body: Center(
-        child: Stack(
-          children: [
-            Container(
-              height: double.infinity,
-              width: double.infinity,
-              child: Image.asset('images/background.jpg'),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget> [
-                //Container(
-                 // height: 200,
-                  //width: 200,
-                 // child: Image.asset('images/gifmainpage.gif'),
-               // ),
-
-
-                Card(
-                  child: RaisedButton(
-                    padding: EdgeInsets.all(2),
-                    color: Colors.black,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          height: 135,
-                          width: 135,
-                          child: Image(image: AssetImage('images/13.png')
-                          ),
+      body: SafeArea(
+        child: Center(
+          child: Stack(
+            children: [
+              Row(
+                //crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Card(
+                      child: SizedBox(
+                        height: 900,
+                        width: 348,
+                        child: Image(
+                          image: AssetImage('images/background.png'),
+                          fit: BoxFit.fill,
                         ),
-                      ],
-                    ),
-                    //child: new IconButton(icon: Icon(Icons.play_arrow)),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => SecondScreen()),
-                      );
-                    },
-                  ),
-                ),
-                Card(
-                  child: RaisedButton(
-                    padding: EdgeInsets.all(2),
-                    color: Colors.black,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
+                      )
 
-                        Container(
-                          height: 135,
-                          width: 135,
-                          child: Image(image: AssetImage('images/11.png')
-                          ),
+
+                  ),
+                ],
+              ),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget> [
+                    Card(
+                      child: RaisedButton(
+                        padding: EdgeInsets.all(2),
+                        color: Colors.black,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 135,
+                              width: 135,
+                              child: Image(image: AssetImage('images/13.png')
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                        //child: new IconButton(icon: Icon(Icons.play_arrow)),
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => SecondScreen()),
+                          );
+                        },
+                      ),
                     ),
-                    // child: new IconButton(icon: Icon(Icons.play_arrow)),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => Stats()),
-                      );
-                    },
-                  ),
-                ),
-                Card(
-                  child: RaisedButton(
-                    padding: EdgeInsets.all(2),
-                    color: Color(colButtons),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Container(
-                          height: 135,
-                          width: 135,
-                          child: Image(image: AssetImage('images/12.png')
-                          ),
+                    Card(
+                      child: RaisedButton(
+                        padding: EdgeInsets.all(2),
+                        color: Colors.black,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+
+                            Container(
+                              height: 135,
+                              width: 135,
+                              child: Image(image: AssetImage('images/11.png')
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                        // child: new IconButton(icon: Icon(Icons.play_arrow)),
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => Stats()),
+                          );
+                        },
+                      ),
                     ),
-                    // child: new IconButton(icon: Icon(Icons.play_arrow)),
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => Settings()),
-                      );
-                    },
-                  ),
+                    Card(
+                      child: RaisedButton(
+                        padding: EdgeInsets.all(2),
+                        color: Color(colButtons),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 135,
+                              width: 135,
+                              child: Image(image: AssetImage('images/credits.png')
+                              ),
+                            ),
+                          ],
+                        ),
+                        // child: new IconButton(icon: Icon(Icons.play_arrow)),
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => Settings()),
+                          );
+                        },
+                      ),
+                    ),
+
+                  ],
                 ),
+              ),
 
-              ],
-            ),
-
-          ],
+            ],
+          ),
         ),
       ),
     );

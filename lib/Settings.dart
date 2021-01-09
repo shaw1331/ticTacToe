@@ -13,8 +13,14 @@ class Settings extends StatelessWidget {
       backgroundColor: Color.fromRGBO(41, 41, 41, 100),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+            Image(
+                image: AssetImage('images/credits1.png') ,
+
+            ),
+
+
             FlatButton(
               onPressed: () {
                 Navigator.pushReplacement(

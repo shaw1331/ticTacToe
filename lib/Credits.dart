@@ -15,8 +15,14 @@ class Credits extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Image(
-              image: AssetImage('images/credits1.png'),
+            Container(
+              constraints: BoxConstraints.expand(),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('images/credits1.png'),
+                  fit: BoxFit.fill,
+                ),
+              ),
             ),
 
             // FlatButton(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tictactoe/secondscreen.dart';
+import 'Singleplayer.dart';
 
 import 'colors.dart';
 
@@ -26,9 +27,9 @@ class Preplay extends StatelessWidget {
                 alignment: Alignment.center,
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SecondScreen()),
+                      MaterialPageRoute(builder: (context) => SinglePlayer()),
                     );
                   },
                   shape: RoundedRectangleBorder(
@@ -53,7 +54,12 @@ class Preplay extends StatelessWidget {
             child: Align(
                 alignment: Alignment.center,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondScreen()),
+                    );
+                  },
                   color: Color(colButtons),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),

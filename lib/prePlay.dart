@@ -26,17 +26,17 @@ class Preplay extends StatelessWidget {
                 child: RaisedButton(
                   onPressed: () {},
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
+                      borderRadius: BorderRadius.circular(20.0),
+                      side: BorderSide(color: Color(colPurp), width: 3)),
                   color: Color(colButtons),
                   child: Text(
-                    "Single Player",
+                    "SINGLE PLAYER",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Color(colPurp),
                         fontSize: 20,
                         fontWeight: FontWeight.w800),
                   ),
-                  padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                  padding: const EdgeInsets.fromLTRB(80.0, 15.0, 80.0, 15.0),
                 )),
           ),
           Container(
@@ -50,16 +50,16 @@ class Preplay extends StatelessWidget {
                   onPressed: () {},
                   color: Color(colButtons),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
+                      borderRadius: BorderRadius.circular(20.0),
+                      side: BorderSide(color: Color(colPurp), width: 3)),
                   child: Text(
-                    "Two Player",
+                    "TWO PLAYER",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Color(colPurp),
                         fontSize: 20,
                         fontWeight: FontWeight.w800),
                   ),
-                  padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                  padding: const EdgeInsets.fromLTRB(94.0, 15.0, 94.0, 15.0),
                 )),
           ),
         ],

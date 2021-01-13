@@ -15,24 +15,18 @@ class MainScreen extends StatelessWidget {
         child: Center(
           child: Stack(
             children: [
-              Row(
-                //crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Card(
-                      child: SizedBox(
-                        height: 900,
-                        width: 348,
-                        child: Image(
-                          image: AssetImage('images/background.png'),
-                          fit: BoxFit.fill,
-                        ),
-                      )
-
-
-                  ),
-                ],
+              Container(
+                constraints: BoxConstraints.expand(),
+                decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('images/background.png'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
               ),
+
+
+
               Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

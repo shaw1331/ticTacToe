@@ -15,6 +15,15 @@ class Stats extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+              Container(height:200,
+                  width: 200,
+                  child: Image(image: AssetImage('images/johain.jpeg'), )),
+            Container(height:200,
+                width: 200,
+                child: Image(image: AssetImage('images/sohain.jpeg'), )),
+
+
             FlatButton(
               onPressed: () {
                 Navigator.pushReplacement(

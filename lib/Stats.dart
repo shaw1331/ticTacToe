@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 import 'colors.dart';
+import 'variables.dart';
 
 class Stats extends StatelessWidget {
   @override

@@ -10,12 +10,11 @@ class SecondScreen extends StatelessWidget {
         backgroundColor: Color(colButtons),
         title: Text("SecondScreen"),
       ),
-
       backgroundColor: Color.fromRGBO(41, 41, 41, 100),
       body: Column(
-        children: <Widget> [
+        children: <Widget>[
           Row(
-            children: <Widget> [
+            children: <Widget>[
               Container(
                 child: Expanded(
                   child: Image(
@@ -23,13 +22,11 @@ class SecondScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
-
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget> [
+            children: <Widget>[
               FlatButton(
                 onPressed: () {
                   Navigator.pushReplacement(
@@ -49,11 +46,8 @@ class SecondScreen extends StatelessWidget {
               ),
             ],
           )
-
-
         ],
       ),
-
     );
   }
 }

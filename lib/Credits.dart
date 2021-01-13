@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'mainscreen.dart';
 import 'colors.dart';
 
-class Settings extends StatelessWidget {
+class Credits extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,33 +16,31 @@ class Settings extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Image(
-                image: AssetImage('images/credits1.png') ,
-
+              image: AssetImage('images/credits1.png'),
             ),
 
-
-            FlatButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => MainScreen()),
-                );
-              },
-              color: Color(colnav),
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                // Replace with a Row for horizontal icon + text
-                children: <Widget>[
-                  Text(
-                    "Back",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
-                  )
-                ],
-              ),
-            ),
+            // FlatButton(
+            //   onPressed: () {
+            //     Navigator.pushReplacement(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => MainScreen()),
+            //     );
+            //   },
+            //   color: Color(colnav),
+            //   padding: EdgeInsets.all(10.0),
+            //   child: Column(
+            //     // Replace with a Row for horizontal icon + text
+            //     children: <Widget>[
+            //       Text(
+            //         "Back",
+            //         style: TextStyle(
+            //           color: Colors.white,
+            //           fontSize: 20,
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),

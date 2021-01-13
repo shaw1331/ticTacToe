@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictactoe/secondscreen.dart';
 
 import 'colors.dart';
 
@@ -24,7 +25,12 @@ class Preplay extends StatelessWidget {
             child: Align(
                 alignment: Alignment.center,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => SecondScreen()),
+                    );
+                  },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       side: BorderSide(color: Color(colPurp), width: 3)),
